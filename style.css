@@ -1,102 +1,177 @@
-body {
-    margin: 0px;
-    font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial,
-        sans-serif;
+@charset "UTF-8";
+ @font-face {
+     font-family: 'Sodo-Sans Bold';
+     src: url(font/SoDoSans-Bold.ttf);
 }
-header{
+ @font-face {
+     font-family: 'Sodo-Sans SemiBold';
+     src: url(font/SoDoSans-SemiBold.ttf);
+}
+ @font-face {
+     font-family: 'Sodo-Sans Regular';
+     src: url(font/SoDoSans-Regular.ttf);
+}
+ .primary-color {
+     background-color: #D4E9E2;
+}
+ .text-color {
+     color: #1E3932;
+}
+
+@media screen and (min-width: 1300px){
+    .starbucks_main, .header_starbucks {
+        margin: 0 60px;
+    }
+}
+* {
+    margin: 0%;
+    font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+    scrollbar-width: thin;
+}
+.header_starbucks {
+    font-family: 'Sodo-Sans Bold';
+    position: fixed;
+    background-color: #ffff;
     width: 100%;
-    height: 20%;
+    margin-top: -2.5em;
+    box-shadow: 0px 4px 3px 0px rgba(163, 162, 162, 0.71);
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(163, 162, 162, 0.71);
+    -moz-box-shadow: 0px 4px 3px 0px rgba(163, 162, 162, 0.71);
 }
+/* Start Menu */
 
-.logo img {
-    display: inline-block;
-    width: 20%;
-    height: 20%;
+.header_starbucks .navbar {
+    font-size: 12px;
+    font-weight: bolder;
+    letter-spacing: 1px;
 }
-.logo{
-    display: inline-block;
-    float: left;
+.navbar-brand img{
     width: 30%;
-    position: absolute;
+    height: 30%;
+    border-radius: 50%;
 }
-.navbar-container {
-    box-shadow: 0px 4px 5px 0px rgba(191, 122, 122, 0.71);
-    -webkit-box-shadow: 0px 4px 5px 0px rgba(191, 122, 122, 0.71);
-    -moz-box-shadow: 0px 4px 5px 0px rgba(191, 122, 122, 0.71);
-    display: inline-block;
-    
-}
-.navbar {
-    max-width: 1560px;
-    padding: 20px;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    width: 70%;
-    float: left;
-    position: relative;
-}
-.navbar-left div {
-    text-transform: uppercase;
-    font-weight: 600;
-}
-.navbar-left div {
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-left: 5%;
-}
-.navbar-left div:hover,
-.find-a-store:hover {
-    color: #00754a;
-}
-
-.navbar-left,
-.navbar-right {
+.navbar .container-fluid .container-fluid {
     display: flex;
     align-items: center;
 }
-
-.navbar-left > *,
-.navbar-right > * {
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 30%;
-    margin-right: 5%;
+.navbar .container-fluid .nav .nav-item .nav-link:hover {
+    color: #0F8953 !important;
 }
-
-.find-a-store {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
+.icon {
+    font-size: 20px;
 }
-
-.sign-in,
-.join-now {
-    font-weight: 500;
-    border: 1px solid black;
-    border-radius: 40px;
-    padding: 5px 20px 5px 20px;
+@media screen and (min-width: 750px) {
+    .navbar .container-fluid .container-fluid {
+        display: flex;
+        justify-content: center;
+   }
+    .navbar .container-fluid .container-fluid a {
+        display: none;
+   }
+    .navbar .container-fluid .container-fluid .btn-light, .btn-dark {
+        display: none;
+   }
 }
-
-.join-now {
-    background-color: black;
-    color: white;
+@media screen and (min-width: 880px) {
+    .navbar .container-fluid .container-fluid a {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+   }
 }
-
-.join-now:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+@media screen and (min-width: 1050px) {
+    .navbar .container-fluid .container-fluid .btn-light {
+        display: inline-block;
+   }
 }
-
-.sign-in:hover {
-    background-color: rgba(0, 0, 0, 0.06);
+@media screen and (min-width: 1120px) {
+    .navbar .container-fluid .container-fluid .btn-dark {
+        font-size: 12px;
+        display: inline-block;
+   }
 }
-
-.container {
+/* Start Offcanvas */
+.container-fluid .navbar-brand img {
+    width: 40px;
+}
+@media screen and (min-width: 768px) {
+    .navbar .container-fluid .navbar-brand img {
+        width: 50px;
+   }
+}
+.navbar+.offcanvas {
+    width: 310px;
+    font-family: 'Sodo-Sans SemiBold';
+}
+.offcanvas .nav .nav-link {
+    font-size: 12px;
+}
+.offcanvas-header .nav .nav-item {
+    transition: all .1s ease;
+}
+.offcanvas-header .nav .nav-item:hover {
+    background-color: #e6e6e6;
+}
+.bi-list {
+    font-size: 25px;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.btn {
+    font-family: 'Sodo-Sans SemiBold';
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition: all .3s ease;
+    letter-spacing: 0.5px;
+}
+.btn:hover, .btn:focus, .btn:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.657);
+}
+/*main*/
+main {
     max-width: 1440px;
-    margin: auto;
 }
+/* Start Carousel */
+
+#carrosel{
+    margin-top: 4%;
+    background-color: #00754a;
+}
+.carousel-inner img{
+    width: 100%;
+}
+.carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.541);
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+.carousel-indicators .active {
+    background-color: rgba(255, 255, 255, 0.681);
+}
+.starbucks_main .carousel .carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+}
+
 .product img {
     max-width: 100%;
     object-fit: contain;
@@ -105,7 +180,6 @@ header{
 .product {
     display: flex;
 }
-
 .product-left,
 .product-right {
     max-width: 50%;
