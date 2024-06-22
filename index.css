@@ -19,7 +19,7 @@
 }
 
 @media screen and (min-width: 1300px){
-    .starbucks_main, .header_starbucks {
+    .pinerity_main, .header_pinerity {
         margin: 0 60px;
     }
 }
@@ -28,7 +28,7 @@
     font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial, sans-serif;
     scrollbar-width: thin;
 }
-.header_starbucks {
+.header_pinerity {
     font-family: 'Sodo-Sans Bold';
     position:fixed;
     z-index: 1;
@@ -42,7 +42,7 @@
 }
 /* Start Menu */
 
-.header_starbucks .navbar {
+.header_pinerity .navbar {
     font-size: 12px;
     font-weight: bolder;
     letter-spacing: 1px;
@@ -162,7 +162,6 @@ main {
     text-indent: -999px;
     cursor: pointer;
     background-clip: padding-box;
-    border: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     opacity: .5;
@@ -171,7 +170,7 @@ main {
 .carousel-indicators .active {
     background-color: rgba(255, 255, 255, 0.681);
 }
-.starbucks_main .carousel .carousel-control-prev, .carousel-control-next {
+.pinerity_main .carousel .carousel-control-prev, .carousel-control-next {
     opacity: 1;
 }
 
@@ -193,6 +192,11 @@ main {
     height: 100%;
     align-content: stretch;
     flex-direction: column;
+}
+.product-right button{
+    margin-top: 40px;
+    background-color: #1e3932;
+    color: white;
 }
 
 .product-title {
@@ -292,7 +296,7 @@ main {
     justify-content: center;
     align-items: center;
     transition: all .3s ease;
-    background-color: black;
+    background-color: rgb(10, 59, 21);
     border-radius: 50%;
     color: white;
 }
@@ -309,7 +313,7 @@ main {
 .politicas span:nth-child(4) {
     padding-left: 10px;
 }
-.footer-starkbucks .politicas{
+#dono{
     font-size: 14px;
     margin: 50px 10px 20px;
 }
