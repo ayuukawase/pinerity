@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Beneficiário</title>
+</head>
+<body>
+  <form action="cadastroBeneficiarioExe.php" method="post">
+    <fieldset>
+      <legend>Cadastro do Beneficiario</legend>
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+      </div>
+      <br>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email">
+      </div>
+      <br>
+      <div>
+        <label for="senha">Senha</label>
+        <input type="password" id="senha">
+      </div>
+      <br>
+      <div>
+        <label for="ativo">Situação</label>
+        <input type="hidden" id="ativo" value="0">
+        <input type="checkbox" id="ativo" value="1">Ativo
+      </div>
+      <br>
+      <div>
+        
+      </div>
+    </fieldset>
+  </form>
+
+  <?php
+
+
+
+  ?>
+</body>
+</html>
+
+
 <?php
   $nome = $_POST['nome'];
   $email = $_POST['email'];
